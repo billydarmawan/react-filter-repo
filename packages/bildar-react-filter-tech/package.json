@@ -1,18 +1,21 @@
 {
   "name": "bildar-react-filter-tech",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "source": "src/index.js",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "unpkg": "./dist/index.umd.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist/*"
   ],
   "scripts": {
-    "build": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=o",
-    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=o",
+    "build-types": "tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist/types",
+    "build-app": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=o --generateTypes=false",
+    "build": "npm run build-app && npm run build-types",
+    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=o --generateTypes=false",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
@@ -24,6 +27,7 @@
   "author": "billy.darmawan",
   "license": "MIT",
   "devDependencies": {
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "typescript": "^5.3.2"
   }
 }
