@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "lerna build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run dev -w web"
   },
@@ -12,5 +13,9 @@
   "workspaces": [
     "packages/react-filter",
     "packages/web"
-  ]
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^7.4.2"
+  }
 }
