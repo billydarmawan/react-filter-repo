@@ -1,7 +1,7 @@
 {
   "name": "web",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,7 @@
     "@asphalt-react/button": "^2.0.0-alpha.26",
     "@asphalt-react/checkbox": "^2.0.0-alpha.19",
     "@asphalt-react/textfield": "^2.0.0-alpha.27",
-    "bildar-react-filter-tech": "^1.0.2",
+    "bildar-react-filter-tech": "^1.0.3",
     "immer": "^10.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
