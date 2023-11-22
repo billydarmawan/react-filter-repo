@@ -14,7 +14,7 @@ export function ReactFilterProvider({
   const appliedStateKey = useMemo(() => {
     let hashKey = "";
     for (const [k] of Object.entries(registery)) {
-      hashKey += `${k}${params.get(k) ?? ""}`;
+      hashKey += `${k}-${params.get(k) ?? ""}`;
     }
     return hashKey;
   }, [params, registery]);
