@@ -1,0 +1,33 @@
+#root {
+  padding: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label {
+  font-weight: bold;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.gap-wide {
+  gap: 8rem;
+}
+.gap-m {
+  gap: 1rem;
+}
+.gap-s {
+  gap: 0.5rem;
+}
