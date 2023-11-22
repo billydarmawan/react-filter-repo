@@ -13,9 +13,9 @@
   ],
   "scripts": {
     "build-types": "tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist/types",
-    "build-app": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=o --generateTypes=false",
+    "build-app": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=jsx --generateTypes=false",
     "build": "npm run build-app && npm run build-types",
-    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=o --generateTypes=false",
+    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=jsx --generateTypes=false",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
