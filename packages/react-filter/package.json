@@ -21,8 +21,8 @@
     "react-router": "^6.17.0",
     "react-router-dom": "^6.17.0"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "billy.darmawan",
+  "license": "MIT",
   "devDependencies": {
     "microbundle": "^0.15.1"
   }
