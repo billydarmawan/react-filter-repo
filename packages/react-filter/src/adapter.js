@@ -59,7 +59,7 @@ export class JSONAdapter extends BaseAdapter {
 
   toString(object) {
     try {
-      return JSON.stringify(object) ?? "";
+      return encodeURIComponent(JSON.stringify(object)) ?? "";
     } catch (error) {
       return "";
     }
@@ -67,7 +67,7 @@ export class JSONAdapter extends BaseAdapter {
 
   toValue(string) {
     try {
-      return JSON.parse(string) ?? this.defaultValue;
+      return JSON.parse(decodeURIComponent(string)) ?? this.defaultValue;
     } catch (error) {
       return this.defaultValue;
     }

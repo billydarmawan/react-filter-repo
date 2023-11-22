@@ -1,12 +1,9 @@
 import "./App.css";
 import {
-  BooleanAdapter,
   StringAdapter,
   useFilter,
   useFilterField,
   useFilterFieldArray,
-  JSONAdapter,
-  ArrayAdapter,
 } from "react-filter";
 
 import { Button } from "@asphalt-react/button";

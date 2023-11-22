@@ -20,11 +20,11 @@ export function ReactFilterProvider({
   }, [params, registery]);
 
   const appliedState = useMemo(() => {
-    const state = {};
+    const nextState = {};
     for (const [k, { adapter }] of Object.entries(registery)) {
-      state[k] = adapter.toValue(params.get(k));
+      nextState[k] = adapter.toValue(params.get(k));
     }
-    return state;
+    return nextState;
   }, [appliedStateKey]);
 
   const [state, setState] = useState(appliedState);
