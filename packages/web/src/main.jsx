@@ -8,7 +8,7 @@ import {
   JSONAdapter,
   ReactFilterProvider,
   StringAdapter,
-} from "react-filter";
+} from "bildar-react-filter-tech";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App.jsx";

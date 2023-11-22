@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages/react-filter",
+    "packages/bildar-react-filter-tech",
     "packages/web"
   ],
   "dependencies": {},

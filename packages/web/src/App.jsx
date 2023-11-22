@@ -4,7 +4,7 @@ import {
   useFilter,
   useFilterField,
   useFilterFieldArray,
-} from "react-filter";
+} from "bildar-react-filter-tech";
 
 import { Button } from "@asphalt-react/button";
 import { Input, Textfield, Timefield } from "@asphalt-react/textfield";
