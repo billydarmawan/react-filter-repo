@@ -33,7 +33,7 @@ function App() {
   const [name, setName] = useFilterField("name");
   const [minAmount, setMinAmount] = useFilterField("min_amount");
   const [time, setTime] = useFilterField("time");
-  const [promo, setPromo] = useFilterField("promo", new BooleanAdapter());
+  const [promo, setPromo] = useFilterField("promo");
   const { array: statusList, toggle: toggleStatus } =
     useFilterFieldArray("status");
   const {
@@ -41,7 +41,7 @@ function App() {
     append: appendKeyword,
     setAt,
     removeAt,
-  } = useFilterFieldArray("keywords", new ArrayAdapter([], new JSONAdapter()));
+  } = useFilterFieldArray("keywords");
 
   const items = useDropdown();
   const statusListOptions = useStatusList();
