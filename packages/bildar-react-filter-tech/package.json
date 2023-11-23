@@ -12,11 +12,12 @@
     "dist/*"
   ],
   "scripts": {
-    "build-types": "tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist/types",
-    "build-app": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=jsx --generateTypes=false",
     "build": "npm run build-app && npm run build-types",
-    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=jsx --generateTypes=false",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-types": "tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist/types",
+    "build-app": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=jsx --external react,react-dom,react-router,react-router-dom --generateTypes=false",
+    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react=React,react/jsx-runtime=jsx --external react,react-dom,react-router,react-router-dom --generateTypes=false",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^18.2.0",
